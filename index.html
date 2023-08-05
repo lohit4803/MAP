@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <!-- <link rel="stylesheet" href="style.css">  -->
+  </head>
+  <body>
+    <div class="main-container">
+      <div class="imgContainer" style="width: 1000px; background-color: black">
+        <h1 id="head">
+         
+          Post Office Application
+        </h1>
+        <p id="text" >
+          This Application Allows you to extract information about the nearest
+          Post Offices, based on your location.
+        </p>
+        <div>
+          <img
+            src="./pic1.png"
+            style="
+              width: 400px; height: 362px; margin-top: 100px;  margin-left: 70px; "
+          />
+        </div>
+      </div>
+      <!-- Display the ip Address -->
+      <div class="ipContainer">
+        <div class="ipClass">
+          <h1>Your Current IP Address is: <span id="getIpAddress"></span></h1>
+          
+        </div>
+        <button type="submit" id="submitBtn">Get Started</button>
+      </div>
+    </div>
+
+    <!-- Container for the display of the geolocation -->
+
+    <div class="container">
+      <div class="miniContainer1">
+        <p style="color: #b8bccc">IP Address :</p>
+        <span id="ipAddress"></span>
+      </div>
+
+      <div class="info">
+        <div class="miniInfo">
+          <div class="text">
+            <p class="properties">Lat :</p>
+            <p id="lat"></p>
+          </div>
+          <div class="text">
+            <p class="properties">City :</p>
+            <p id="city"></p>
+          </div>
+          <div class="text">
+            <p class="properties">organisation :</p>
+            <p id="organisation"></p>
+          </div>
+        </div>
+        <div class="miniInfo">
+          <div class="text">
+            <p class="properties">Long :</p>
+            <p id="long"></p>
+          </div>
+          <div class="text">
+            <p class="properties">Region :</p>
+            <p id="region"></p>
+          </div>
+          <div class="text">
+            <p class="properties">Hostname :</p>
+            <p id="hostname"></p>
+          </div>
+        </div>
+      </div>
+      <div id="embedMap">
+        <!--Google map will be embedded here-->
+      </div>
+      <!-- <div class="image">
+        <h1 style="text-align: center;">
+           Your Current Location
+        </h1>
+        <div class="imageSection">
+            <iframe src="https://maps.google.com/maps?q=35.856737, 10.606619&z=15&output=embed" width="360" height="270" frameborder="0" style="border:0"></iframe>
+        </div>
+       </div> -->
+
+      <!-- Image section where Google Map place -->
+      <div class="image">
+        <h1 style="text-align: center">Your Current Location</h1>
+        <div id="imageSection">
+          <!-- <iframe 
+                src="https://maps.google.com/maps?q=22.7179,75.8333&z=15&output=embed">
+            </iframe> -->
+        </div>
+      </div>
+
+      <!-- more information section -->
+
+      <div class="moreInfo">
+        <h1>More Information About You</h1>
+        <div id="moreInfoSection">
+          <!-- to be added dynamically -->
+        </div>
+      </div>
+
+      <!-- postoffice near me section -->
+
+      <div class="postOfficeSection">
+        <h1>Post Offices Near You</h1>
+        <div id="inputDiv">
+          <img src="./Vector.png" alt="" />
+          <input type="text" id="input" placeholder="Search By Name" />
+        </div>
+
+        <div id="cards">
+          <!-- to be added dynamically -->
+        </div>
+      </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
